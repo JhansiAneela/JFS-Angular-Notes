@@ -1,0 +1,247 @@
+Spring boot :-
+--------------------
+1. spring boot is a module that provides rapid application development (RAD) feature to the spring framework.
+2. It is a combination of spring framework and embeded servers (tomcat & jetty).
+3. xml configuration is not required and xml file is an external source..
+4. using spring initializer we can generate spring boot project.
+5. Here we are using maven dependencies.
+6. we can easily configure and set up and to run simple and web based applications.
+
+
+Why springBoot :-
+-------------------------
+1. The dependency injection approach is used in Spring Boot.
+2. It contains powerful database transaction management capabilities.
+3. It reduces the cost and development time of the application.
+
+
+*** Along with the Spring Boot Framework, There are 5 spring sisters to build application. 
+*** There are the following Spring sister projects are as follows:
+
+
+1. Spring Data       : It simplifies data access from the relational and NoSQL databases.
+
+2. Spring Batch      : It provides powerful batch processing.
+
+3. Spring Security   : It is a security framework that provides robust security to applications.
+
+4. Spring Social     : It supports integration with social networking like LinkedIn.
+
+5. Spring Integration: It is an implementation of Enterprise Integration Patterns. 
+
+
+
+Dependency Injection :-
+------------------------------
+1. Dependency Injection is an design pattern to remove the dependency from our programming code.
+2. It can be easy to test and manage the application.
+3. DI makes our programming loosely coupled and easier for testing.
+4. The process of injecting from one class object in to another class object.
+
+looseley coupled :- EX:- we can access all the dependencies from our external file such as XML.
+
+
+IOC Container :-
+--------------------
+1. IoC container is a framework for implementing automated dependency injection.
+2. To instantiate the application class.
+3. To configure the object.
+4. To assemble the dependencies between the objects.
+
+
+General loose coupling ang tight coupling :-
+-------------------------------------------------
+1. Tight coupling means, one class dependes on another class.
+2. Loose coupling means , one class depends on interface rather than class.
+
+
+Difference between applicaton properties file and yaml file :-
+---------------------------------------------------------------------
+In both we can configure the database details, but writing syntax style is different. 
+
+
+Annotations :-
+------------------
+
+@Id :-
+---------
+1. The @Id annotation is used to define the mapping to the primary key.
+2. You can use @Id annotation to fields/properties of these types: 
+
+       1. Primitive Java types and their wrapper classes. 
+       2. Arrays of primitive or wrapper types.
+
+
+@Document :-
+----------------
+@Document is used to map a class to noSQL database (specifically mongoDB), it represents a MongoDB documents.
+
+
+@Entity :-
+------------
+@Entity is used to map a class to a relational database, it represents a database table.
+
+
+@Override :-
+----------------
+   The @Override annotation denotes that the child class method overrides the base class method.
+   
+1. @override annotation informs the compiler that the element is meant to override an element declared in a superclass.
+2. It improves the readability of the code. we have override methods in interfaces and inheritance. 
+
+
+@RestController :-
+------------------------
+1. RestController is a Spring annotation that is used to build REST API.
+2. It is a class level annotation and to mark it as a request handler.
+3. It is used to create RESTful web services using Spring MVC. It will return the data in JSON format.
+4. It is a combination of controller and response body.
+
+
+@Controller :-
+------------------
+1. @Controller is used to declare common web controllers which can return HTTP response.
+2. In Spring MVC, both @Controller and @RestController annotations are used to define web controllers as per MVC Design pattern.
+3. It is mostly used with @RequestMapping annotation.
+
+
+@RequestBody and @ResponseBody:-
+---------------------------------------
+1. @Requestbody annottaion is used to parse the incoming HTTP requests. 
+2. @ResponseBody annotation is used to convert ur object in HTTP response in the form like JSON, XML, TEXT.
+
+
+@RequestMapping :-
+------------------------
+1. Request mapping annotation is used to map web requests on to a specific handler or methods.
+2. Request mapping annotation can be applied to the controller class as well as methods.
+
+
+@Requestparam :-
+---------------------
+1. Request param annotation is used to bind a web request parameter to method parameter.
+
+
+@path variable :-
+--------------------
+1. This annotation is used to extract the value of the template variables and assign their value to method variable.
+
+
+@Autowired :-
+----------------
+1. @Autowired annotation is used for automatic dependency injection.
+2. It is used to autowire spring bean on setter methods, instance variable, and constructor.
+3. When we use @Autowired annotation, the spring container auto-wires the bean by matching data-type.
+
+
+@Repository :-
+-------------------
+1. @Repository annotation is used for storage, retrieval, search, update and delete operation on objects.
+2. It is not necessary to keep the @Repository annotation on interfaces that extend Mongodb Repository.
+3. used to create a bean. If you are not using this annotation then u are creating a bean in some other way. so, there is no difference if u keep or not.
+
+
+@Bean :-
+----------
+1. It is a class level annotation. It is an alternative of an xml <bean> tag. 
+2. It tells the method to produce a bean to be managed by Spring Container.
+
+   
+@Service :-
+--------------
+1.  It is also used at class level. In service, we can implement business logic.
+
+@springbootapplication :-
+----------------------------------
+1. It is a combination of three annotations @EnableAutoConfiguration, @ComponentScan, and @Configuration.
+
+@EnableAutoConfiguration :-
+-------------------------------
+1. It auto-configures the bean that is present in the classpath and configures it to run the methods. 
+
+@ComponentScan :-
+-------------------
+1. It is used when we want to scan a package for beans. It is used with the annotation @Configuration. 
+2. We can also specify the base packages to scan for Spring Components.
+
+@Configuration :-
+---------------------
+1. It is a class-level annotation. The class annotated with @Configuration used by Spring Containers as a source of bean definitions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

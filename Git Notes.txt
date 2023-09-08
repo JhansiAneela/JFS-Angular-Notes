@@ -1,0 +1,166 @@
+git -- version control system
+git and github are not same. github makes tools to use git.
+
+Tracking code changes
+Tracking who made changes
+Coding collaboration
+
+git pull -- main to local
+git push -- local to main
+git staging -- marked a modified file 
+git commit -- commit the folder
+
+git config --global user.name "w3schools-test"      -- use global for all the repositories in git
+git config --global user.email "test@w3schools.com" -- for just the current repo, you can remove global
+
+mkdir -- makes a new directory
+cd --changes the current working directory
+
+git init -- Initialize empty git repository.
+
+--------------------------------- Git creates a hidden folder to keep track of changes.-------------------------
+
+ls -- will list all the files in the directory
+
+git status -- To check if its a part of our repo or not.
+
+2 states:-
+----------
+Tracked   - files that Git knows about and are added to the repository
+Untracked - files that are in your working directory, but not added to the repository
+
+
+git staging :- Staged files are files that are ready to be committed to the repository you are working on
+               git add "filename"                -- single file to commit
+               git add --all is git add -A       -- all modified files are ready to commit (new, modified, and deleted)
+               again u need to check git status.
+
+
+git commit :- When we commit, we should always include a message.
+
+              git commit -m "message description!"
+              The commit command performs a commit, and the -m "message" adds a message.
+              git commi -a -m "message" -- skipping the staging environment
+               
+
+git commit log :- To view the history of commits for a repository, you can use the log command: 
+                  git log
+
+git command -help  --  See all the available options for the specific -- Ex:- for status, git status -help 
+git help --all     --  See all possible commands
+
+git branch :- git branch branchname -- create a new branch
+              git branch            -- list the existing branches.
+               *master              -- specifies that we are currently on that branch.
+              
+              git branch -a         -- To see all local and remote branches
+              git branch -r         -- To see only remote branches
+
+git checkout : git checkout branchname    -- To move to the particular branch
+               git checkout -b branchname -- create and move to the new branch
+
+
+----------------------------------------- merge conflict is remaining --------------------------------
+
+
+
+GITHUB :-
+----------
+
+git remote add origin "github link" -- origin -- local git repo
+
+Git pull :-
+------------
+
+pull is a combination of 2 different commands:
+
+1. fetch
+2. merge
+
+Git fetch :-
+------------
+
+git fetch origin  -- Get all the change history of the origin for this branch:
+
+Git Merge :-
+--------------
+merge combines the current branch, with a specified branch.
+
+git checkout master
+git merge branchname
+
+git merge origin master -- Merge the current branch with the branch master, on origin:
+
+git branch -d branchname -- To delete the branch
+
+Git Pull :-
+------------
+It is used to pull all changes from a remote repository into the branch you are working on.
+
+git pull origin -- Update the current branch from its origin
+
+Git Push :-
+------------
+git commit -a -m "filename"
+git status
+git push origin
+
+git clone :-  git clone "github code https link"
+
+git remote :- git remote add origin "github code https link"
+              git remote -v -- on which remote we are in
+              git remote rename origin upstream -- to rename 
+
+Now we have 2 remotes:
+---------------------------
+origin   - our own fork, where we have read and write access
+upstream - the original, where we have read-only access
+
+Git Ignore :-
+---------------
+when sharing ur code with others, u will no share this files.
+log files
+temporary files
+hidden files
+personal files.
+
+Git can specify which files or parts of your project should be ignored by Git using a .gitignore file.
+
+Git will not track files and folders specified in .gitignore. However, the .gitignore file itself IS tracked by Git.
+
+touch .gitignore -- To create a .gitignore file
+
+Ignore any files with the .log extension
+Ignore everything in any directory named temp
+
+Git Revert :-
+---------------
+revert is the command we use when we want to take a previous commit and add it as a new commit, keeping the log intact.
+
+1. find out previous commit
+2. make a new commit, where we have "accidentally" deleted a file
+3. git log --oneline --> --oneline option, which gives just one line per commit showing
+
+1. git revert HEAD --no-edit
+
+   revert HEAD -- We revert the latest commit using git revert HEAD
+   --no-edit   -- To skip the commit message editor
+
+2. git revert HEAD~1 -- revert the last two commits.
+
+Git reset :-
+------------
+reset is the command we use when we want to move the repository back to a previous commit, discarding any changes made after that commit.
+Step 1: Find the previous commit
+Step 2: Move the repository back to that step:
+
+git reset
+
+Git Amend :-
+-------------
+commit --amend is used to modify the most recent commit.
+It combines changes in the staging environment with the latest commit, and creates a new commit.
+
+One of the simplest things you can do with --amend is to change a commit message.
+
+git commit --amend -m "Added lines to README.md"
