@@ -1,0 +1,38 @@
+
+HashSet :-
+-------------
+1. Hashset class is used to create a collection that uses hash table for storage.
+2. It inherits the AbstractSet class and implements Set interface.
+
+
+Important points :-
+----------------------
+1. It stores the elements by using a mechanism called hashing.
+2. It contains unique elements only.
+3. It allows null value.
+4. It class is non synchronized. 
+5. It doesnot maintain insertion order. elements are inserted on the basis of hashcode.
+
+
+Example program :-
+------------------------
+class HashSet1{  
+ public static void main(String args[]){
+  
+  //Creating HashSet and adding elements  
+
+    HashSet<String> set=new HashSet();  
+           set.add("One");    
+           set.add("Two");    
+           set.add("Three");   
+           set.add("Four");  
+           set.add("Five");  
+
+           Iterator<String> i=set.iterator();  
+
+           while(i.hasNext())  
+           {  
+           System.out.println(i.next());  
+           }  
+ }  
+}

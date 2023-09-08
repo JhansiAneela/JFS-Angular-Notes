@@ -1,0 +1,10 @@
+
+
+ArrayList vs Linkedlist :-
+--------------------------------
+1. Array list uses dynamic array                  , linked list uses doubly linked list to store the elements
+2. Manipulation is slow                           , Manipulation is fast
+3. Better for storing & accessing the data        , Better for manipulating the data
+4. Array list acts as list only                   , Linked list acts as list and queue
+5. memory allocation is contiguos                 , memory allocation is not contigous
+6. Default capacity is 10 to create array list    , here there is no default capacity

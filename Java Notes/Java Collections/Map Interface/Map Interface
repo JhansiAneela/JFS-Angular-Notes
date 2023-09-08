@@ -1,0 +1,12 @@
+
+Map Interface :-
+-------------------
+1. Map contains the value on the basis of key. i.e; key-value pair.
+2. Each key and value pair is known as an entry. A Map contains unique keys.
+3. A Map is useful if you have to search, update or delete elements on the basis of a key.
+4. Map doesnot allow duplicate keys but allow duplicate values.
+
+5. Two interfaces : Map and SortedMap, 
+   Three classes  : HashMap, LinkedHashMap, and TreeMap. 
+
+6. HashMap and LinkedHashMap allow null keys and values, but TreeMap doesn't allow any null key or value.

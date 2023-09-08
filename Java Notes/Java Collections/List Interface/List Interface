@@ -1,0 +1,13 @@
+
+List Interface :-
+---------------------
+1. List Interface is the child interface of collection interface.
+2. We can store the ordered collection of objects. 
+3. It can have duplicate values.
+
+3. List interface is implemented by the classes ArrayList, LinkedList, Vector, and Stack.
+
+                          List <data-type> list1= new ArrayList();  
+				  List <data-type> list2 = new LinkedList();  
+				  List <data-type> list3 = new Vector();  
+				  List <data-type> list4 = new Stack(); 

@@ -1,0 +1,41 @@
+
+Linked Hashset :-
+-----------------------
+1. Java LinkedHashSet class is a Hashtable and Linked list implementation of the Set interface.
+
+
+Important points :-
+---------------------
+1. It contains unique elements only like HashSet.
+2. It provides all optional set operations and allows null elements.
+3. It is non-synchronized.
+4. It maintains insertion order.
+
+
+Example Program :-
+----------------------
+
+import java.util.*;
+
+class LinkedHashSet1{ 
+
+ public static void main(String args[])
+ {  
+ //Creating HashSet and adding elements  
+        LinkedHashSet<String> set=new LinkedHashSet();  
+
+               set.add("One");    
+               set.add("Two");    
+               set.add("Three");   
+               set.add("Four");  
+               set.add("Five");  
+
+               Iterator<String> i=set.iterator(); 
+
+               while(i.hasNext())  
+               {  
+               System.out.println(i.next());  
+               }
+                 
+ }  
+}  

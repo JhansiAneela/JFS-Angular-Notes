@@ -1,0 +1,60 @@
+
+Junit :-
+----------------
+1. Junit is a standard framework for java and it is often combined with mockito.
+
+
+Unit Tests :-
+--------------------
+1. Tests at the lowest level.
+2. Test single unit of softwares.
+3. In java, these are typically single methods.
+
+
+
+Example :-
+----------------
+method under test :-
+--------------------------
+
+public class addition{
+  int sum(int num1,int num2){
+  return num1+num2;
+  }
+}
+
+
+
+Coding Convention :-
+----------------------------------------------------------
+1. Name of the test class must end with "Test".
+2. Name of the method must begin with "test".
+3. Return type of a test method must be void.
+4. Test method must not throw any exception.
+5. Test method must not have any parameter.
+
+
+
+unit test :-
+-----------------
+@Test
+public void testSum() {
+   assertEquals(2,cal.sum(1,1));
+  }
+
+
+
+Unit Tests are necessary :-
+--------------------------------
+*** unit tests are necessary in every good piece of software.
+
+1. Increased confidence during development.
+2. Its very clean and more reusable code.
+3. low cost of mistakes.
+
+
+
+
+who writes unit tests :-
+----------------------------
+** Typically unit tests are written by software developers not software testers.

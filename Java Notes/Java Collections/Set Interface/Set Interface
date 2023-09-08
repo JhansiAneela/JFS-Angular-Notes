@@ -1,0 +1,13 @@
+
+Set Interface :-
+---------------------
+1. set Interfae extends the collection interface.
+2. We can store the unordered collection of objects. 
+3. It cannot have duplicate values.
+4. We can store at most one null value in Set.
+
+5. Set is implemented by HashSet, LinkedHashSet, and TreeSet.
+ 
+                  Set<data-type> s1 = new HashSet<data-type>();  
+				  Set<data-type> s2 = new LinkedHashSet<data-type>();  
+				  Set<data-type> s3 = new TreeSet<data-type>(); 

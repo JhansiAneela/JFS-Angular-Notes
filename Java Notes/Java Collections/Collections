@@ -1,0 +1,13 @@
+
+Collections :-
+----------------
+1. Collection in java is a framework that provides the architectute to store and manipulate the objects.
+2. Java Collections can perform operations susch as searching, sorting, insertion, manipulation and deletion.
+3. collection represents a single unit of objects. i.e, group.
+
+
+Framework :-
+--------------
+1. It provides readymade architectute.
+2. Represents a set of classes and interfaces.
+3. It is optional.

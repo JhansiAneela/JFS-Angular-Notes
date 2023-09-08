@@ -1,0 +1,37 @@
+
+Hash Table :-
+-----------------
+1. Java Hashtable class implements a hashtable, which maps keys to values. 
+2. It inherits Dictionary class and implements the Map interface.
+
+Important points :-
+-------------------------
+1. It contains unique elements.
+2. It doesn't allow null key or value.
+3. It is synchronized.
+4. The initial default capacity of Hashtable class is 11 whereas loadFactor is 0.75.
+5. It contains values based on the key.
+
+Example program :-
+-------------------------
+
+import java.util.*;  
+
+class Hashtable1{  
+
+ public static void main(String args[]){
+
+  Hashtable<Integer,String> hm=new Hashtable<Integer,String>();  
+  
+  hm.put(100,"Amit");  
+  hm.put(102,"Ravi");  
+  hm.put(101,"Vijay");  
+  hm.put(103,"Rahul");  
+  
+  for(Map.Entry m:hm.entrySet()){  
+   System.out.println(m.getKey()+" "+m.getValue());  
+  } 
+
+ }  
+}
+

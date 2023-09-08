@@ -1,0 +1,39 @@
+
+HashMap :-
+------------
+1. Java HashMap class implements the Map interface which allows us to store key and value pair, where keys should be unique.
+2. If you try to insert the duplicate key, it will replace the element of the corresponding key.
+
+
+Important points :-
+-----------------------
+1. It contains values based on the key.
+2. It contains only unique keys.
+3. It may have one null key and multiple null values.
+4. It is non synchronized.
+5. It maintains no order.
+
+ 
+Example program :-
+----------------------
+
+public class HashMapExample1{ 
+ 
+ public static void main(String args[]){ 
+ 
+   HashMap<Integer,String> map=new HashMap<Integer,String>(); //Creating HashMap
+    
+   map.put(1,"Mango");  //Put elements in Map  
+   map.put(2,"Apple");    
+   map.put(3,"Banana");   
+   map.put(4,"Grapes");   
+       
+   System.out.println("Iterating Hashmap..."); 
+ 
+   for(Map.Entry m : map.entrySet()){ 
+   
+    System.out.println(m.getKey()+" "+m.getValue());  
+  
+   }  
+}  
+}

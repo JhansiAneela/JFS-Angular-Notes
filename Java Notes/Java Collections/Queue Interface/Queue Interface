@@ -1,0 +1,8 @@
+
+Queue Interface :-
+------------------
+1. Queue interface maintains the first-in-first-out order.  
+2. There are various classes like PriorityQueue, Deque, and ArrayDeque which implements the Queue interface.
+
+                    Queue<String> q1 = new PriorityQueue();  
+					Queue<String> q2 = new ArrayDeque();  

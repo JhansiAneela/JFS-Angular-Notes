@@ -1,0 +1,29 @@
+
+Iterator Interface :-
+-------------------------
+1. Iterator interface purpose is to iterate all the elements in forward direction only.
+2. we have three methods. They are :
+                
+               1. public boolean hasnext()
+ 		   2. public Object next()
+               3. public void remove()	
+
+
+Iterable Interface :-
+--------------------------
+1. Iterable interface is the root interface for all the collection of classes.
+2. Collection interface extends the iterable interface so all the sub classes of collection interface implements iterbale interface.
+
+3. It contains only one abstract menthod.
+
+			1. Iterator<T> iterator()
+
+
+Collection Interface :-
+-------------------------
+1. Collection interface is the interface which is implemented by all the classes in collection framework.
+2. Some of the methods of Collection interface are :-
+
+					1.Boolean add ( Object obj) 
+					2.Boolean addAll ( Collection c) 
+					3.void clear(), etc.

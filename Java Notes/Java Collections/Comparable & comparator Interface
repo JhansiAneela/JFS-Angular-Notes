@@ -1,0 +1,17 @@
+
+Comparable Interface :-
+------------------------------
+1. It provides single sorting sequence. 
+2. Based on single element we can do sorting such as id, name, etc
+3. Comparable affects the original class, i.e., the actual class is modified.
+4. we can use compareTo() method to sort the elements.
+5. It is present in java.lang package
+6. We can sort the list elements of Comparable type by Collections.sort(List) method.
+
+Comparator Interface :-
+-----------------------------
+1. It provides multiple sorting sequence.
+2. Comparator doesn't affect the original class, i.e., the actual class is not modified.
+3. we can use compare() method to sort the elements.
+4. It is present in java.util.package.
+5. We can sort the list elements of Comparator type by Collections.sort(List, Comparator) method.

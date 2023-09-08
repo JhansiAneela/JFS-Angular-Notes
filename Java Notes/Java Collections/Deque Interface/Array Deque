@@ -1,0 +1,10 @@
+
+Array Deque :-
+-------------------
+1. ArrayDeque class implements the Deque interface. 
+2. It facilitates us to use the Deque. 
+3. Unlike queue, we can add or delete the elements from both the ends.
+4. ArrayDeque is faster than ArrayList and Stack and has no capacity restrictions.
+
+                     Deque<String> deque = new ArrayDeque<String>(); 
+

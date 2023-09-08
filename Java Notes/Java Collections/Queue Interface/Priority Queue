@@ -1,0 +1,9 @@
+
+
+Priority Queue :-
+-------------------
+1. The PriorityQueue class implements the Queue interface.  
+2. PriorityQueue doesn't allow null values to be stored in the queue.
+3. It holds the elements or objects which are to be processed by their priorities.
+
+             PriorityQueue<String> queue=new PriorityQueue<String>();

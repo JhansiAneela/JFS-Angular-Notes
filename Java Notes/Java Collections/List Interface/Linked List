@@ -1,0 +1,52 @@
+
+Linked List :-
+--------------------
+1. It uses doubly linked list to store the elements.
+2. It inherits the AbstractList class and implements List and Deque interfaces.
+
+
+
+Important points :-
+---------------------
+1. It can contain duplicate elements.
+2. It maintains insertion order.
+3. It is non synchronized. 
+4. Manipulation is fast because no shifts needed.
+5. Java LinkedList class can be used as a list, stack or queue.
+
+
+
+Example program :-
+----------------------
+
+public class LinkedListExample
+{  
+ public static void main(String args[])
+ { 
+ 
+  LinkedList<String> list=new LinkedList<String>();  //Creating linkedlist 
+ 
+  list.add("Mango");                                 //Adding object in arraylist    
+  list.add("Apple");    
+  list.add("Banana");    
+  list.add("Grapes");  
+  
+  //Traversing list through Iterator  
+  Iterator itr=list.iterator();          //getting the Iterator
+
+  // using while loop
+
+  while(itr.hasNext())                  //check if iterator has the elements  
+  {                 
+   System.out.println(itr.next());      //printing the element and move to next
+  }
+
+
+  // using for loop
+   
+   for(String fruit:list)    
+      System.out.println(fruit);  
+ 
+    
+ }  
+}

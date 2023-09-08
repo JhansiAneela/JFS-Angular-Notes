@@ -1,0 +1,37 @@
+
+Linked HashMap :-
+-------------------
+1. LinkedHashMap class is Hashtable and Linked list implementation of the Map interface, with predictable iteration order.
+
+Important Points :-
+------------------------
+1. It contains values based on the key.
+2. It contains unique elements.
+3. It may have one null key and multiple null values.
+4. It is non synchronized.
+5. It maintains insertion order.
+
+
+Example program :-
+--------------------------
+
+import java.util.*;
+
+class LinkedHashMap1{ 
+
+ public static void main(String args[]){  
+   
+  LinkedHashMap<Integer,String> hm=new LinkedHashMap<Integer,String>();  
+  
+  hm.put(100,"Amit");  
+  hm.put(101,"Vijay");  
+  hm.put(102,"Rahul"); 
+
+  
+for(Map.Entry m:hm.entrySet())
+{  
+   System.out.println(m.getKey()+" "+m.getValue());  
+} 
+ 
+ }  
+}  

@@ -1,0 +1,41 @@
+
+TreeSet :-
+-----------
+1. Java TreeSet class implements the Set interface that uses a tree for storage.
+
+Important points :-
+----------------------
+1. It contains unique elements.
+2. It doesnot allow null elements.
+3. It maintains ascending order.
+4. It is non-synchronised.
+
+
+Example program :-
+--------------------------
+
+import java.util.*; 
+
+class TreeSet1{ 
+
+ public static void main(String args[]){  
+
+  //Creating and adding elements  
+  TreeSet<String> al=new TreeSet<String>(); 
+
+  al.add("Ravi");  
+  al.add("Vijay");  
+  al.add("Ravi");  
+  al.add("Ajay"); 
+
+  //Traversing elements  
+  Iterator<String> itr=al.iterator();  
+
+  while(itr.hasNext())
+  {  
+   System.out.println(itr.next());  
+  }  
+  
+ }  
+} 
+

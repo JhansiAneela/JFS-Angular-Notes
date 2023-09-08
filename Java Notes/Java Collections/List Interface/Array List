@@ -1,0 +1,74 @@
+
+Array List :-
+-------------------
+1. Arraylist class uses dynamic array to store the elements and there is no size limit.
+2. It inherits the AbstractList class and implements List interface.
+
+
+
+Important points :-
+------------------------
+1. It can contain duplicate elements.
+2. It maintains insertion order.
+3. It is non synchronized. 
+4. It works on index basis.
+5. Manipulation is little bit slower than linked list.
+6. we cannot create array list using primitive data types. it required wrapper class.
+
+            ArrayList<int> al = ArrayList<int>();              // does not work  
+		    ArrayList<Integer> al = new ArrayList<Integer>();     // works fine 
+
+
+
+
+
+Non-generic Vs. Generic Collection :-
+---------------------------------------------
+1. Java new generic collection allows you to have only one type of object in a collection. 
+2. Now it is type-safe, so typecasting is not required at runtime.
+                                      
+            ArrayList list=new ArrayList();                   //creating old non-generic arraylist 
+            ArrayList<String> list=new ArrayList<String>();   //creating new generic arraylist  
+
+
+
+
+
+Example program :-
+--------------------
+public class ArrayListExample
+
+{  
+ public static void main(String args[])
+
+ { 
+ 
+  ArrayList<String> list=new ArrayList<String>();  //Creating arraylist 
+ 
+  list.add("Mango");                        //Adding object in arraylist    
+  list.add("Apple");    
+  list.add("Banana");    
+  list.add("Grapes");  
+  
+  //Traversing list through Iterator  
+  Iterator itr=list.iterator();          //getting the Iterator
+  
+
+  // using while loop
+
+  while(itr.hasNext())                    //check if iterator has the elements 
+  {                  
+   System.out.println(itr.next());         //printing the element and move to next
+  }     
+
+
+  // using for loop
+   
+   for(String fruit:list)    
+      System.out.println(fruit);  
+  
+ } 
+
+
+}  
+ 

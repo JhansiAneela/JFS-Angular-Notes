@@ -1,0 +1,34 @@
+
+Annotation :-
+-------------------
+1. Annotation is a feature introduced in java 5
+
+2. Annotation is used to add metadata to java source code.
+
+3. This will allow you to add information to an existing data object in your source code.
+
+4. Java allows users to define their own annotations.
+
+5. Annotation can be described using "@" symbol.
+
+6. Junit annotations will direct the execution flow of the program.
+
+
+
+@Test :-
+------------
+1. Denotes that a method is a test method.
+
+Can we use @test at class level? :-
+---------------------------------------------
+If a class have a huge number of test cases then adding @test annotation is a little bit difficult in that case we can use the @test annotation in the class level.
+
+
+
+@BeforeEach :-
+------------------
+1. Denotes that the annotated method should be executed before each @Test, @RepeatedTest,      @PrameterisedTest, or Test factory method in the current class.
+
+2. The @Before annotation is used when different test cases share the same logic. 
+3. The method with the @Before annotation always runs before the execution of each test case.
+4. This annotation is commonly used to develop necessary preconditions for each @Test method.

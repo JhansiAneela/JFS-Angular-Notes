@@ -1,0 +1,8 @@
+
+Deque Interface :-
+---------------------
+1. Deque interface extends the Queue interface.
+2. In Deque, we can remove and add the elements from both the side. 
+3. Deque stands for a double-ended queue which enables us to perform the operations at both the ends.
+
+                    Deque d = new ArrayDeque(); 
