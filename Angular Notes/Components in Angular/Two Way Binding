@@ -1,0 +1,17 @@
+// .ts file :--
+
+[()] ----> Symbol of Two Way Binding.
+
+-----> If u want to do Two Way Binding u have to import forms Module in app.module.ts
+       and added to the imports array. 
+
+
+// In template :--
+
+<input [(ngModel)] = "name" type = "text">
+{{name}}
+
+
+// In Class :--
+
+public name = "";

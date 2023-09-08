@@ -1,0 +1,53 @@
+/* app.module.ts
+
+ u have to import HTTP Client module in app.module.ts and imports section.
+
+
+// employee.service.ts :--
+
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs/Observable';
+
+export class EmployeeService{
+
+    private _url: string = "/assets/data/employees.json";
+
+    constructor(private http: HttpClient){}
+
+getEmployees(): Observable<IEmployee[]>
+{
+    //return this.http.get<IEmployee[]>(this._url);
+}
+//
+
+
+// u have to create data 
+
+// src --> assets --> data --> employee.json
+
+// employee.json :--
+
+[
+    {"id":1, "name":"Aneela", "age":22},
+    {"id":2, "name":"Jhansi", "age":23},
+    {"id":3, "name":"Nerella", "age":24}
+]
+
+
+// src --> app --> employee.ts
+
+// employee.ts :--
+
+export interface IEmployee
+{
+    id : number,
+    name: string,
+    age: number
+}
+
+
+*/
+
+
+
+

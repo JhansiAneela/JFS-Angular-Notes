@@ -1,0 +1,18 @@
+/ Observables :--
+
+1. A sequence of items that arrive asynchronously over time.
+2. HTTP call -- single item.
+3. Single iteam -- HTTP response.
+
+
+// HTTP, Observables and RXJS :--
+
+1. HTTP Get request from service.
+2. Receive the observable and cast it in to an array.
+3. Subscribe to the obserbavle from components.
+4. Assign the array to a local variable.
+
+// RxJS :-- It is a library that enables us towards with Observables in angular applications.
+
+1. Reactive Extensions for javascript.
+2. External library to work with Observables.

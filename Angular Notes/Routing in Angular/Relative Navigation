@@ -1,0 +1,13 @@
+
+*** If we change the pat name in routing module then u need to change all the occurences.
+
+onSelect(department)
+{
+    // this.router.navigate(['/departments',department.id]);
+
+    this.router.navigate([department.id], {relativeTo: this.route});
+
+}
+
+
+zthis.router.navigate(['../']) --> this router is related to go back one segment in one url.

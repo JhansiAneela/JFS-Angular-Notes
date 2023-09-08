@@ -1,0 +1,104 @@
+// app.component.ts:--
+
+public title = "Welcome to codevolution";
+
+
+
+// app.component.html :--
+
+<div style="text-align:center">
+    <h2>welcome to {{title}}</h2>
+</div>
+<employee-list></employee-list>
+
+
+
+// employee-list component.ts :--
+
+// In template:--
+
+<h2>Employees list</h2>
+<h2>{{ errorMsg }}</h2>                                                                         
+<ul *ngFor = "let employee of employees">
+    <li>{{employee.name}}</li>
+</ul>
+
+// In class:--
+
+public employees = [];
+public errorMsg;
+
+constructor(private _employeeService: EmployeeService){}  // employeeService--local variable.
+
+ngOnInit()
+{
+    this.employees = this._employeeService.getEmployees();
+
+    // using HTTP to fetch data
+
+    this._employeeService.getEmployee()
+        .subscribe(data => this.employee = data,
+                   error => this.errorMsg = error);
+
+}
+
+
+----> u want to get all the data.
+
+-----> employee detail component.ts :--
+
+// In template :--
+
+<h2>Employees list</h2>   
+<h2>{{ errorMsg }}</h2>
+<ul *ngFor = "let employee of employees">
+    <li>{{employee.id}} . {{employee.name}} - {{employee.age}}</li>
+</ul>
+
+// In class:--
+
+public employees = [];
+public errorMsg;
+
+constructor(private _employeeService: EmployeeService){}  // employeeService--local variable.
+
+ngOnInit()
+{
+    this.employees = this._employeeService.getEmployees();
+
+    // using HTTP to fetch data
+
+    this._employeeService.getEmployee()
+        .subscribe(data => this.employee = data,
+                   error => this.errorMsg = error);
+
+}
+
+
+---> u need to create service file --- ng g s employee
+
+// employee.service.ts :--
+
+-------> @Injectable() decorator tells angular that this service might be itself have 
+           injected dependencies.
+
+-------> If u want to inject data from one service to another service then this decorator is must.
+
+-------> If service class don't have dependencies then @injectable decorator is not necessary.
+
+
+// In class:--
+
+@Injectable()
+export class EmployeeService{
+
+    constructor(){}
+
+getEmployees()
+{
+    return [
+    {"id":1, "name":"Aneela", "age":22},
+    {"id":2, "name":"Jhansi", "age":23},
+    {"id":3, "name":"Nerella", "age":24}
+    ];
+}

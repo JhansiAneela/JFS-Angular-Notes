@@ -1,0 +1,54 @@
+/* department-list component.ts:--
+
+** In template:--
+
+<h3>Department List</h3>
+<ul class = "items">
+    <li (click) = "onSelect(department)" *ngFor="let department of departments">
+        <span class="badge"> {{department.id}}</span> {{department.name}}
+    </li>
+</ul>
+
+*** create ng g c department-detail -it -is
+
+** app-routing.module.ts :--
+
+{ path: 'departments/:id', component: DepartmentDetailComponent },
+
+export class AppRoutingModule {}
+export const routingComponents = [DepartmentDetailComponent]
+
+constructor(private router: Router)
+
+** In class:--
+
+departments = [
+    {"id": 1, "name":"ECE"},
+    {"id": 2, "name":"CSE"},
+    {"id": 1, "name":"EEE"}
+]
+
+onSelect(department)
+{
+    this.router.navigate(['/departments',department.id]);
+
+}
+
+** department-detail component.ts:--
+
+import {{Activated route }} from '@angular/router';
+
+// In template:--
+
+<h3> You selected department with id = {{departmentId}}</h3>
+
+public departmentId;
+constructor(private router: ActivatedRoute){}
+
+ngOnInit()
+{
+    let id = parseInt(this.router.snapshot.paramMap.get('id'));
+    this.departmentId = id;
+}
+ */
+

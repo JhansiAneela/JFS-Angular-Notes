@@ -1,0 +1,37 @@
+/*
+
+** Wildcard route should always be the last route in the configuration that is because the router
+   tries to match the path from the top.
+
+** If u keep that path in top, it doesnot check so it shows pageNot Found.
+
+1. Create ng g c page-not-found -it -is
+
+// page-not-found.component.ts :--
+
+// In template:--
+
+<h3>Page Not Found</h3>
+
+---> Now add the wild card route.
+
+app-routing.module.ts :--
+
+   import { NgModule } from '@angular/core';
+   import { Routes, RouterModule } from '@angular/core';
+
+   const routes: Routes = [
+       {path: '', redirectTo: '/departments', pathMatch: 'full'},
+       {path: 'departments', component: DepartmentListComponent},
+       {path: 'employees', component: EmployeeListComponent},
+       {path: "**", component: PageNotFoundComponent}
+   ];
+
+   @NgModule({
+       imports: [RouterModule.forRoot(routes)],
+       exports: [RouterModule]
+   })
+
+   export class AppRoutingModule {}
+   export const routingComponents = [DepartmentListCovmponent, EmployeeListComponent, PageNotFoundComponent]
+   */

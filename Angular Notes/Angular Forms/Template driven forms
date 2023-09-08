@@ -1,0 +1,14 @@
+
+1. Easy to use and similar to Angular js.
+2. Two way data binding with ngModel.
+3. Bulky HTML code and minimal component code.
+4. Automatically tracks the form and form elements state and validity.
+
+Drawbacks :--
+
+5. unit testing is a challenge.
+6. Readability decreases with complex forms and validations.
+
+*** When u make a small forms for that unit testing can be handled with the browser then u can cantemplate driven forms.
+
+*** When u make a complex forms for that unit testing must be necessary then u can go reactive forms.

@@ -1,0 +1,30 @@
+// .ts file
+
+// In template :--
+
+<h2>welcome {{name}}</h2>               // o/p:-- welcome Aneela 
+
+<h2 [style.color] = "'orange'">Style Binding</h2> 
+
+<h2 [style.color] = "hasError ? 'red' : 'green'">Style Binding1</h2>
+
+<h2 [style.color] = "highlightColor">Style Binding2</h2>
+
+<h2 [ngStyle] = "titleStyles">Style Binding3</h2>
+
+
+// In class :--
+
+public name = "Aneela";
+
+public hasError = true;                   // o/p:-- output is in red color
+public hasError = false;                  // o/p:-- output is in green color
+
+public isSpecial = true;
+public highlightColor = "Orange";
+
+public titleStyles = 
+{
+    color: "blue",
+    fontStyle: "italic"
+}

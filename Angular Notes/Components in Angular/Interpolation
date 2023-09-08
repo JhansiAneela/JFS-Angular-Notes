@@ -1,0 +1,45 @@
+// .ts file 
+
+{{}} --> Symbol of Interpolation.
+
+----> U created the property in class file then bind the data in to the template.
+
+
+// In template :--
+
+<h2>welcome {{name}}</h2>       // o/p :-- welcome Aneela  // Binding the data from class to template.
+
+<h2>{{2+2}}</h2>                // o/p :-- 4               // Angular Evaluates the expression.
+
+<h2>{{"Welcome " + name}}</h2>  // o/p :-- Welcome Aneela  // String concatenation.
+
+<h2>{{name.length}}</h2>        // o/p :-- 12              // using java script properties and methods.
+
+<h2>{{name.toUpperCase()}}</h2> // o/p:-- ANEELA           // Changing to uppercase.
+
+<h2>{{greetUser()}}</h2>        // o/p:-- Hello Aneela     // Using methods.
+
+<h2>{{siteUrl}}</h2>            // o/p:-- http://localhost:4200 // To get urls.
+
+
+// These operations we cannot perform in String Interpolation : --
+
+<h2>{{a = 2+2}}</h2>               // o/p:-- Getting Error   // Bindings cannot contain Assignments.
+
+<h2>{{window.location.href}}</h2>  // o/p:-- Error           // Template is not aware of global java script variables.
+
+
+
+// In class :--
+
+public name = "Aneela";
+
+public siteUrl = window.location.href;
+
+
+
+// Under ngOnInit(){}
+
+greetUser(){
+    return "Hello " + this.name;
+}

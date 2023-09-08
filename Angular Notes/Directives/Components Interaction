@@ -1,0 +1,48 @@
+// app.component.ts :--
+
+// In class :--
+
+public name = "Aneela";
+public message = "";
+
+// app.component.html :--
+
+<div style = "text-align:center">
+    <h2>{{message}}</h2>
+</div>
+<app-test (childEvent) = "message = $event" [parentData] = "name"></app-test>
+
+
+
+// test.component.ts :--
+
+// In template :--
+
+<h2>{{"hello " + parentData}}</h2>   // o/p:-- Hello Aneela -->Data bind from parent to child and
+                                                          display the output in child component.
+
+<h2>{{"hello " + name}}</h2>  // o/p :-- Hello Aneela
+
+----> From child to parent component
+
+<button (click) = "fireEvent()"> Send event </button>
+
+
+// In class :--
+
+@Input() public parentData;
+
+@Input('parentData') public name;
+
+-----> From child component to parent component
+
+@Output() public childEvent = new EventEmitter();
+
+
+
+------->under ngOnInit(){}
+
+fireEvent()
+{
+    this.childEvent.emit("Hey Codevolution");
+}

@@ -1,0 +1,14 @@
+// .ts file 
+
+// In template :--
+
+<div [ngSwitch] = "color">
+    <div *ngSwitchCase = "'red'">Red color</div>
+    <div *ngSwitchCase = "'blue'">Blue color</div>
+    <div *ngSwitchCase = "'pink'">pink color</div>
+    <div *ngSwitchDefault>Others</div>
+</div>
+
+// In class :--
+
+public color = "red';

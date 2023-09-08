@@ -1,0 +1,25 @@
+// .tsfile
+
+# ----> Symbol of Template Reference variable.
+
+----->Template reference variable can refer to html element and all of its DOM properties
+
+// In template :--
+
+<h2>welcome {{name}}</h2>   // o/p :-- welcome Aneela
+
+<input #myInput type = "text"> ---> #myInput =  Template Reference variable.
+
+<button (click)="logMessage(myInput.value)">Log</button>
+
+// In class :--
+
+public name = 'Aneela";
+] 
+// Under ngOnInit(){}
+
+logMessage(value)
+{
+    console.log(value);
+
+}

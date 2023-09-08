@@ -1,0 +1,23 @@
+Forms :--
+
+1. vital to business applications --> login, submit, register etc.
+2. create an experience that guides the user efficiently and effectively through the workflow.
+
+3. Developers :--
+   
+   1. Data binding
+   2. Chnage tracking
+   3. validation
+   4. visual feedback
+   5. Error messages.
+   6. Form submission.
+
+4. 1. Template - collect data
+   2. Class -Bind data
+   3. Service - Send data
+   4. server.
+
+5. Two approches : --
+ 
+ 1. Templte driven forms -- Heavy on the component template.
+ 2. Reactive forms  -- Heavy on the component class.

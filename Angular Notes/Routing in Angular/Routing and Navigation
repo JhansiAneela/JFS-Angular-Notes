@@ -1,0 +1,47 @@
+/* Routing App:--
+
+1. Generate a project with routing option.
+2. Generate departmentlist and employeelist components.
+3. Configure the routes.
+4. Add buttons and use directives to navigate.
+
+1. ng new routing-demo --route.
+2. Inside routing-demo -- create ng g c employee-list, departmentlist.
+
+** index.html:--
+<head>
+    <base href="/">
+</head>
+
+3.  app-routing.module.ts :--
+
+   import { NgModule } from '2angular/core';
+   import { Routes, RouterModule } from '2angular/core';
+
+   const routes: Routes = [
+       {path: 'departments', component: DepartmentListComponent},
+       {path: 'employees', component: EmployeeListComponent}
+   ];
+
+   @NgModule({
+       imports: [RouterModule.forRoot(routes)],
+       exports: [RouterModule]
+   })
+
+   export class AppRoutingModule {}
+   export const routingComponents = [DepartmentListCovmponent, EmployeeListComponent]
+
+4. app.component.html:--
+
+<div style="text-align:center">
+    <h2>Routing and Navigation</h2>
+</div>
+<nav>
+    <a routerLink="/departments" routerLinkActivate="active">Departments</a>
+    <a routerLink="/employees" routerLinkActivate="active">Employees</a>
+</nav>
+
+<router-outlet></router-outlet>
+*/
+
+

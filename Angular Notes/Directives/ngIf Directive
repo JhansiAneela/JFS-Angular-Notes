@@ -1,0 +1,35 @@
+// .ts file
+
+Structural Directives : -- Add (or) Remove HTML elements.
+
+// In template:--
+
+// If else Block : --
+
+<h2 *ngIf = "displayName"; else elseBlock> codevolution </h2>
+
+<ng-template #elseBlock>
+    <h2> Name is Aneela </h2>
+</ng-template>
+
+// If Block, then Block, else Block
+
+<div *ngIf = "displayName; then thenBlock; else elseBlock"></div>
+
+<ng-template #thenBlock>
+    <h2>Codevolution</h2>
+</ng-template>
+
+<ng-template #elseBlock>
+    <h2>Hidden</h2>
+</ng-template>
+
+
+
+// In class:--
+
+displayName = false;  // For if-else ---> o/p :-- else Block.
+displayName = true;  // For if-else ---> o/p :-- If Block.
+
+displayName = false;  // For if-then-else ---> o/p :-- else Block.
+displayName = true;  // For if-then-else ---> o/p :-- then Block.

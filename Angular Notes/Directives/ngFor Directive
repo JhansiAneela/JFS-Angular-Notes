@@ -1,0 +1,29 @@
+
+// .ts file :--
+
+// In template :--
+
+<div *ngFor = "let color of colors; index as i"> // o/p:-- Displaying color names and indexes.
+    <h2>{{i}} {{color}}</h2>
+</div>
+
+<div *ngFor = "let color of colors; first as f"> // o/p:-- Displaying color names and first element should be true.
+    <h2>{{f}} {{color}}</h2>
+</div>
+
+ <div *ngFor = "let color of colors; last as l"> // o/p:-- Displaying color names and last element should be true.
+    <h2>{{l}} {{color}}</h2>
+</div>
+
+<div *ngFor = "let color of colors; odd as o"> // o/p:-- Displaying color names and odd indexes should be true..
+    <h2>{{o}} {{color}}</h2>
+</div>
+
+<div *ngFor = "let color of colors; even as e"> // o/p:-- Displaying color names and even indexes should be true.
+    <h2>{{e}} {{color}}</h2>
+</div>
+
+
+// In class :-
+
+public colors = ["red", "blue", "orange", "pink"];

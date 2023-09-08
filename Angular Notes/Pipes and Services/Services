@@ -1,0 +1,27 @@
+// In template:--
+
+// employee list component.ts :--
+
+<h2>Employees list</h2>                                                                         
+<ul *ngFor = "let employee of employees">
+    <li>{{employee.name}}</li>
+</ul>
+
+----> u want to get all the data.
+
+// employee detail component.ts :--
+
+<h2>Employees list</h2>                                                                                   
+<ul *ngFor = "let employee of employees">
+    <li>{{employee.id}} . {{employee.name}} - {{employee.age}}</li>
+</ul>
+
+
+// In class:--
+
+public employees = [
+
+    {"id":1, "name":"Aneela", "age":22},
+    {"id":2, "name":"Jhansi", "age":23},
+    {"id":3, "name":"Nerella", "age":24}
+];

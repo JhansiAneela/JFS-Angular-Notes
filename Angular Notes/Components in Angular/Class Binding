@@ -1,0 +1,67 @@
+// .ts file
+
+! ---> Symbol of clas Binding.
+
+------> Class Binding is very useful bcz it allows you to dynamically to add or remove classes 
+        to the html elements based on state of ur application. 
+
+// In template :--
+
+<h2>welcome {{name}}</h2>               // o/p:-- welcome Aneela  
+
+<h2 class="text-success">Aneela</h2>    // o/p:-- Aneela(green)
+
+<h2 [class]="successClass">Aneela</h2>  // o/p:-- Aneela(green)
+
+<h2 class="text-special" [class]="successClass">Aneela</h2> // o/p:-- Aneela(green)-Not Italic.
+
+<h2 [class.text-danger]="hasError">Aneela</h2>  //o/p:-- Aneela(Red) 
+// When u want to apply conditionally for a single class.
+
+// Conditinally for a multiple class -- we can use ng class directive.
+
+<h2 [ngClass] = "messageClasses">Aneela</h2>
+
+
+// In styles :--
+
+.text-success{
+    color: green;
+}
+
+.text-danger{
+    color: red;
+}
+
+.text-special{
+    font-style: italic;
+}
+
+
+
+// In class :--
+
+public name = "Aneela";
+public successClass = "text-success";
+
+//public hasError = true;                   // o/p:-- output is in some color
+public hasError = false;                  // o/p:-- output is in Black color
+
+public isSpecial = true;
+
+public messageClasses = 
+{
+    "text-success" : !this.hasError,
+    "text-danger" : this.hasError,
+    "text-special" : this.isSpecial
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,75 @@
+  
+1. Dependency Injection, or DI, is a design pattern and mechanism for creating and delivering 
+some parts of an application to other parts of an application that require them
+
+2. Dependency Injection is used to implement IOC Container.
+
+3. DI are useful to create loosely coupled programs.
+
+4. It improves the reusability of the code.
+
+5. It helps to improve the frequency that needs to change a class, template of method or variables in object.
+
+6. It allows classes with angular decorators, such as components, directives, pipes, and
+    injectables to configure dependencies that they need.
+
+
+
+IOC Container :-
+--------------------
+1. Inversion of control (IOC) is a design principle that is closly related to DI.
+2. This responsibility should be inverted means that it should be injected 
+     in to separate container or frame work.
+
+
+// Without Dependency Injection                       
+
+class car                                             
+{
+    engine;
+    tires;
+    constructors()
+    {
+        this.engine = new Engine();
+        this.tires = new Tires();
+    }
+
+}
+
+// with Dependency Injection
+
+class car                                             
+{
+    engine;
+    tires;
+    constructors(engine, tires)
+    {
+        this.engine = engine;
+        this.tires = tires;
+    }
+
+}
+
+
+var myEngine = new Engine();
+var myTires = new Tires();
+var myCar = new Car(myEngine, myTires);
+
+var myEngine = new Engine(parameter);   // if u pass dependencies in Engine then wont effect in car.
+var myTires = new Tires();
+var myCar = new Car(myEngine, myTires);
+
+var myEngine = new Engine(parameter);   // if u pass dependencies in both then wont effect in car.
+var myTires = new Tires(parameter);
+var myCar = new Car(myEngine, myTires);
+
+
+/* DI as a framework. That framework will manage all the depencies that u dont have to keep track
+ of it.
+
+ 1. Define the employee service class
+ 2. Register with Injector.
+ 3. Declare as dependency in emplist and emp details --> emplist and empdetail are examples.
+ 
+ */
+      

@@ -1,0 +1,35 @@
+// .ts file
+
+// In template :--
+
+<h2>welcome {{name}}</h2>   // o/p :-- welcome Aneela
+
+<button (click) = "onClick()">Greet</button> -->In console u will get output.
+{{greeting}}                                 --->Beside button u will see message.
+
+<button (click) = "onClick($event)">Greet</button> -->check output in concole.
+{{greeting}}                                       --->beside button u will see event type.
+
+<button (click) = "greeting ='Welcome Aneela'">Greet</button> -->  beside button u will get output.
+
+
+
+// In class : --
+
+public name = 'Aneela";
+
+public greeting = "";
+
+// Under ngOnInit(){}
+
+onClick()
+{
+    console.log("welcome to Angular Practise");
+    this.greeting = "welcome to Angular Practise";
+}
+
+onClick(event)
+{
+    console.log(event);
+    this.greeting = event.type;
+}

@@ -1,0 +1,39 @@
+// .ts file
+
+[] ----> Symbol of Property Binding.
+
+---> Attributes and properties are not same.
+---> Attributes --- HTML.
+---> Properties --- DOM (Document Object Model).
+---> Attributes initialize DOM Properties.
+---> Attribute values cannot change once they are initialized.
+---> Properties values however can change.
+---> Attribute HTML value specifies initial value. The DOM attribute value specifies current value.
+
+
+
+// In template :--
+
+<h2>welcome {{name}}</h2>   // o/p :-- welcome Aneela  // Binding the data from class to template.
+
+<input [id]="myId" type="text" value="Aneela">         // Binding id property in to input element.
+
+<input id="{{myId}}" type="text" value="Aneela">    // We can use interpolation in property binding.
+
+<input  [disabled]="isDisabled" id="{{myId}}" type="text" value="Aneela"> // o/p should be disabled.
+
+<input  bind-disabled="isDisabled" id="{{myId}}" type="text" value="Aneela">  
+// u can use bind- instead of square brackets.  // u will get outputs as the same.
+
+
+
+
+// In class :--
+
+public name = "Aneela";
+
+public myId = "testId";
+
+public isDisabled =  true;       // output should be disabled.
+
+public isDisabled =  false;      // output should be enabled.
