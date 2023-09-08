@@ -1,0 +1,84 @@
+
+Operators :-
+-----------------
+1. Union
+2. Union All
+3. Intersect
+4. Minus
+
+
+Union :- (To fetch single field)
+----------------
+1. It is used to combine two or more select statements.
+2. It combines both select statements and removes the duplicate rows between them.
+3. Both select statements have the same no of fields and the same data type.
+4. union operator is used to all the daya form both the select statements and remove the duplicates.
+
+
+Syntax :-
+----------------
+SELECT expression1, expression2, ... expression_n  FROM table1  WHERE conditions  
+UNION  
+SELECT expression1, expression2, ... expression_n  FROM table2  WHERE conditions;
+
+Query :-
+-----------
+SELECT name FROM Employee WHERE age = 23
+UNION
+SELECT name FROM Student Where age = 23;
+
+
+
+
+
+Union Using Order By :-
+------------------------------------
+1. Oracle union operator can be used to order by clause to order the results of the query.
+
+Query :-
+---------------
+SELECT id, name FROM Employee  WHERE id <= 20  
+UNION  
+SELECT id, name FROM Student  WHERE name = "Naveen"  
+ORDER BY 1;  
+
+
+
+
+Oracle Intersect Operator:-
+-------------------------
+1. Intersect operator is used to give common data from both select statements.
+2. Intersect operator is used to fetch single field and multiple fields.
+
+Syntax :-
+--------------
+SELECT expression1, expression2, ... expression_n  FROM table1  WHERE conditions  
+INTERSECT  
+SELECT expression1, expression2, ... expression_n  FROM table2  WHERE conditions;  
+
+Query :-
+---------------
+SELECT id,name FROM Employee Where id = 2;
+INTERSECT
+SELECT id,name FROM Student WHERE name = 'Aneela';
+
+
+
+
+
+Oracle Minus Operator :-
+-----------------------------
+1. Minus operator is used to return all the rows in the first select statement and
+       remove all the rows in the second select statement.
+
+Syntax :-
+--------------
+SELECT expression1, expression2, ... expression_n  FROM table1  WHERE conditions  
+MINUS  
+SELECT expression1, expression2, ... expression_n  FROM table2  WHERE conditions;  
+
+Query :-
+---------------
+SELECT id,name FROM Employee Where id = 2;
+MINUS
+SELECT id,name FROM Student WHERE name = 'Aneela';

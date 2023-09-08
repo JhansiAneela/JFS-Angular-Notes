@@ -1,0 +1,28 @@
+
+Data Control Language :-
+------------------------------
+1. DCL Commands are used to grant and take back authority from any database user.
+
+Commands :-
+--------------
+1. Grant
+2. Revoke
+
+
+Grant :-
+-----------
+1. It is used to give user access privileges to a database.
+
+Syntax :-
+------------
+GRANT SELECT, UPDATE ON MY_TABLE TO SOME_USER, ANOTHER_USER;  
+
+
+
+Revoke :-
+-----------
+It is used to take back permissions from the user.
+
+Syntax:-
+------------
+REVOKE SELECT, UPDATE ON MY_TABLE FROM USER1, USER2;  

@@ -1,0 +1,59 @@
+
+Data Query Language :-
+--------------------------
+1. DQL is used to fetch the data from database.
+
+Command :-
+--------------
+1. SELECT
+
+
+
+SELECT :-
+-------------
+1. It is used to select the attribute based on the condition described by WHERE clause.
+
+Syntax :-
+-------------
+SELECT expressions    
+FROM TABLES    
+WHERE conditions;  
+
+
+Example :-
+------------
+
+SELECT Employee_name
+FROM Employee
+WHERE ID = '1';
+
+
+
+All Commands :-
+------------------------
+
+CREATE TABLE Employee
+(
+  id number(10),
+  Name varchar2(50),
+  City varchar2(20)
+);
+
+ALTER TABLE Employee ADD Address varchar2(50);
+
+INSERT INTO Employee(id,Name,City)VALUES(1,"Aneela","Macherla");
+INSERT INTO Employee(id,Name,City)VALUES(2,"Naveen","Vijayawada");
+INSERT INTO Employee(id,Name,City)VALUES(1,"Jhansi","Hyderabad");
+
+UPDATE Employee SET Address = "NehruNagar" WHERE id = '1';
+UPDATE Employee SET Address = "13th ward" WHERE ID = '2';
+UPDATE Employee SET id='3' WHERE Name = "Jhansi";
+
+DELETE FROM Employee WHERE id='3';
+
+SELECT Name FROM Employee WHERE id = '2';
+SELECT Name,id,city,Address FROM Employee WHERE id = '2';
+
+DROP TABLE Employee;
+
+TRUNCATE TABLE Employee;

@@ -1,0 +1,273 @@
+Clauses :-
+-------------------
+1. DISTINCT
+2. from
+3. Order BY
+4. Group BY
+5. Having
+
+
+
+DISTINCT :-
+---------------
+1. This command is used to remove the duplicate records from the result set.
+2. It is only used with select statement.
+
+Syntax :-
+-----------
+SELECT DISTINCT expressions  
+FROM tables  
+WHERE conditions;  
+
+Example :-
+------------
+SELECT DISTINCT * FROM Employee WHERE id = '1';
+SELECT DISTINCT city FROM Employee WHERE id = '1';
+
+
+
+
+FROM :-
+-----------
+1. FROM clause is manadatory clause in select expression.
+2. It specifies the table from which data is to be retrieved.
+
+Syntax :-
+------------
+FROM table_name... Expressions... ;
+
+Example :-
+---------------
+SELECT * FROM Employee WHERE city = "HYDERABAD"; // * = To get all the fields in the table.
+SELECT city FROM Employee WHERE id = '2'; // To get particular field.
+
+
+
+
+ORDER BY :-
+----------------
+1. This clause is used to sort or re-arrange the records in the result set.
+2. The ORDER BY clause is used with select statement.
+
+Syntax :-
+------------
+SELECT expressions  
+FROM tables  
+WHERE conditions  
+ORDER BY expression [ ASC | DESC ];
+
+Example :-
+--------------
+SELECT * FROM Employee WHERE id ='2' ORDER BY city;
+SELECT * FROM Employee WHERE id ='2' ORDER BY city DESC;   // To sort the descending order
+
+
+
+
+GROUP BY :-
+----------------
+1. This clause is used to collect the data from multiple records & group the results BY 
+    one or more columns.
+
+Syntax :-
+------------
+SELECT expression1, expression2, ... expression_n,   
+aggregate_function (aggregate_expression)  
+FROM tables  
+WHERE conditions  
+GROUP BY expression1, expression2, ... expression_n;
+
+
+aggregate_function :-
+------------------------
+It specifies the aggregate functions i.e. SUM, COUNT, MIN, MAX or AVG functions.
+
+aggregate_expression :-
+---------------------------
+It specifies the column or expression on that the aggregate function is based on.
+
+
+With sum function :-
+-----------------------------
+
+Sales department table :-
+----------------------------------
+CREATE TABLE  "SALESDEPARTMENT"   
+   ( "ITEM" VARCHAR2(4000),   
+    "SALE" NUMBER,   
+    "BILLING_ADDRESS" VARCHAR2(4000)  
+   ) 
+
+Query :-
+-----------------
+SELECT item, SUM(sale) AS "Total sales"  
+FROM salesdepartment  
+GROUP BY item;  
+
+
+
+
+With Count function :-
+-------------------------------
+
+Customer table :-
+--------------------------------------
+CREATE TABLE  "CUSTOMERS"   
+   (    "NAME" VARCHAR2(4000),   
+    "AGE" NUMBER,   
+    "SALARY" NUMBER,   
+    "STATE" VARCHAR2(4000)  
+   )  
+
+
+Query :-
+--------------------
+SELECT state, COUNT(*) AS "Number of customers"  
+FROM customers  
+WHERE salary > 10000  
+GROUP BY state; 
+
+
+
+
+With min function :-
+---------------------------
+
+Employee Table :-
+-------------------
+CREATE TABLE  "EMPLOYEES"   
+   (    "EMP_ID" NUMBER,   
+    "NAME" VARCHAR2(4000),   
+    "AGE" NUMBER,   
+    "DEPARTMENT" VARCHAR2(4000),   
+    "SALARY" NUMBER  
+   )  
+
+Query :-
+--------------
+SELECT department,   
+MIN(salary) AS "Lowest salary"  
+FROM employees  
+GROUP BY department;  
+
+
+
+With max function :-
+-------------------------------
+
+Employee Table :-
+-------------------
+CREATE TABLE  "EMPLOYEES"   
+   (    "EMP_ID" NUMBER,   
+    "NAME" VARCHAR2(4000),   
+    "AGE" NUMBER,   
+    "DEPARTMENT" VARCHAR2(4000),   
+    "SALARY" NUMBER  
+   )  
+   
+
+Query :-
+---------------
+SELECT department,  
+MAX(salary) AS "Highest salary"  
+FROM employees  
+GROUP BY department; 
+
+
+
+
+Having Clause :-
+------------------------
+HAVING Clause is used with GROUP BY Clause to restrict the groups of returned rows 
+    where condition is TRUE.
+
+
+Syntax :-
+----------------
+SELECT expression1, expression2, ... expression_n,   
+ aggregate_function (aggregate_expression)  
+FROM tables  
+WHERE conditions  
+GROUP BY expression1, expression2, ... expression_n  
+HAVING having_condition;   
+
+
+
+With GROUP BY SUM function :-
+------------------------------------
+CREATE TABLE  "SALESDEPARTMENT"   
+   (    "ITEM" VARCHAR2(4000),   
+    "SALE" NUMBER,   
+    "BILLING_ADDRESS" VARCHAR2(4000)  
+   )  
+
+Query :-
+--------------
+SELECT item, SUM(sale) AS "Total sales"  
+FROM salesdepartment  
+GROUP BY item  
+HAVING SUM(sale) < 1000; 
+
+
+
+
+With GROUP BY COUNT function :-
+-------------------------------------
+CREATE TABLE  "CUSTOMERS"   
+   (    "NAME" VARCHAR2(4000),   
+    "AGE" NUMBER,   
+    "SALARY" NUMBER,   
+    "STATE" VARCHAR2(4000)  
+   )  
+
+
+Query :-
+-------------
+SELECT state, COUNT(*) AS "Number of customers"  
+FROM customers  
+WHERE salary > 10000  
+GROUP BY state  
+HAVING COUNT(*) >= 2;
+
+
+
+
+With GROUP BY MIN function :-
+----------------------------------
+CREATE TABLE  "EMPLOYEES"   
+   (    "EMP_ID" NUMBER,   
+    "NAME" VARCHAR2(4000),   
+    "AGE" NUMBER,   
+    "DEPARTMENT" VARCHAR2(4000),   
+    "SALARY" NUMBER  
+   ) 
+
+
+Query :-
+----------
+SELECT department,   
+MIN(salary) AS "Lowest salary"  
+FROM employees  
+GROUP BY department  
+HAVING MIN(salary) < 15000;
+
+
+
+With GROUP BY MAX function :-
+-----------------------------------
+CREATE TABLE  "EMPLOYEES"   
+   (    "EMP_ID" NUMBER,   
+    "NAME" VARCHAR2(4000),   
+    "AGE" NUMBER,   
+    "DEPARTMENT" VARCHAR2(4000),   
+    "SALARY" NUMBER  
+   ) 
+
+   
+Query :-
+-------------
+SELECT department,  
+MAX(salary) AS "Highest salary"  
+FROM employees  
+GROUP BY department  
+HAVING MAX(salary) > 30000;  

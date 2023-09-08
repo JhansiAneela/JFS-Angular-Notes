@@ -1,0 +1,83 @@
+
+Data Manipulation Language :-
+---------------------------------
+1. DML Commands are used to modify the database.
+2. DML commnads are not save all the changes permanently in the database. They can be rollback.
+
+Commands :-
+-------------------
+1. INSERT
+2. UPDATE
+3. DELETE
+
+
+
+
+INSERT :-
+------------
+1. It is used to insert data in to the row of a table.
+
+Syntax :-
+-----------
+1. INSERT INTO TABLE_NAME    
+(col1, col2, col3,.... col N)  
+VALUES (value1, value2, value3, .... valueN);  
+
+Example :-
+--------------
+INSERT INTO Employee(id, name, city) VALUES (1, "ANEELA", "MACHERLA");
+
+
+
+
+INSERT ALL :-
+------------------
+1. To insert multiple rows in one table usig single INSERT statement.
+
+Syntax:-
+----------
+INSERT ALL  
+  INTO table_name (column1, column2, column_n) VALUES (expr1, expr2, expr_n)  
+  INTO table_name(column1, column2, column_n) VALUES (expr1, expr2, expr_n)  
+  INTO table_name (column1, column2, column_n) VALUES (expr1, expr2, expr_n)  
+SELECT * FROM dual;
+
+Example :-
+--------------
+INSERT ALL
+  INTO Employee(id, name, city) VALUES (1, "ANEELA", "MACHERLA");
+  INTO Employee(id, name, city) VALUES (2, "JHANSI", "MCL");
+  INTO Employee(id, name, city) VALUES (3, "NERELLA", "HYDERABAD");
+SELECT * FROM dual;
+
+
+
+
+UPDATE :-
+-------------
+1. This command is used to update or modify the value of a column in a table.
+
+Syntax :-
+------------
+UPDATE table_name SET [column_name1= value1,...column_nameN = valueN] [WHERE CONDITION]
+
+Example :-
+------------
+UPDATE Employee SET Emploee_name = "Naveen" WHERE Employee_id = '1';
+
+
+
+
+DELETE :-
+------------
+1. It is used to delete one or more row from a table.
+
+Syntax :-
+--------------
+DELETE FROM table_name [WHERE condition];  
+
+Example :-
+-------------
+DELETE FROM Employee WHERE id = '1';
+
+

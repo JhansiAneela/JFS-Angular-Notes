@@ -1,0 +1,12 @@
+ 
+Joins :-
+------------
+1. Join is a query that is used to combine two or more tables, views.
+2. It retrieves the data from multiple tables and to create a new table.
+
+
+Join Conditions :-
+---------------------
+1. There may be atleast one join condition either in the FROM Clause or where Clause 
+     for joining two tables.
+2. 

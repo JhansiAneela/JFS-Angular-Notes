@@ -1,0 +1,54 @@
+
+Transaction Control Language :-
+----------------------------------
+1. TCL Commands can only use with DML Commands like Insert, Delete and Update.
+
+Commands :-
+--------------
+1. COMMIT
+2. ROLL BACK
+3. SAVE POINT
+
+
+
+COMMIT :-
+------------
+1.This command is used to save all the changes in the database.
+
+Syntax :-
+------------
+COMMIT; 
+
+Example :-
+-------------
+DELETE FROM Employee  
+WHERE id = 1;  
+COMMIT; 
+
+
+
+ROLL BACK :-
+----------------
+This command is used to undo transactions that have not already been saved to the database.
+
+Syntax :-
+-----------
+ROLLBACK;
+
+Example :-
+-------------
+DELETE FROM Employee  
+WHERE id = 1;  
+ROLLBACK;
+
+
+
+SAVE POINT :-
+-----------------
+1. It is used to roll the transaction back at a certain point without rolling back the entire
+    transaction.
+
+
+Syntax :-
+------------
+SAVEPOINT SAVEPOINT_NAME; 

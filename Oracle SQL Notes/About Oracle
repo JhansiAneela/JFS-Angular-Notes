@@ -1,0 +1,82 @@
+
+Oracle :-
+--------------
+1. Oracle is a ** relational database management system **. It is widely used in enterprise applications.
+2. Oracle database has 
+                  
+                  1. insert record
+                  2. update record
+                  3. delete record
+                  4. select record
+                  5. create table
+                  6. Drop table.
+
+
+
+Database :-
+----------------
+1. Database refers to the *** organised collection of structured data *** stored electronically in device.
+2. A database is usually controlled by a database management system (DBMS).
+
+
+
+Oracle Database :-
+-----------------------
+1. Oracle Database is a relational database management system. It is also called **OracleDB or Oracle**.
+2. This database is mostly used for storing, organising and retrieving data.
+3. It is not case senitive.
+
+
+Oracle Features :-
+---------------------
+1. Availability
+2. Security
+3. Scalability
+4. Performance
+5. Analytics
+6. Management
+
+
+Advantages :-
+----------------
+1. Performance
+2. Portability
+3. Backup and recovery
+4. pl/sql
+5. Multiple Database
+6. Flashback technology
+
+
+Disadvantages :-
+-----------------------
+1. Complexity
+2. Cost
+3. Difficult to manage
+
+
+
+usage of Oracle and Sql :-
+------------------------------
+1. In oracle you can use single quotes for varchars like name, city etc.
+2. In sql you can use single or double quotes like name, city etc.
+   
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                           
+
+
+
+
+
+
+
+                                          
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

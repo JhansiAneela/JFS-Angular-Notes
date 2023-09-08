@@ -1,0 +1,115 @@
+
+Data Definition Language :-
+-----------------------------------
+1. DDL changes the structure of the tabale like creating, deleting, altering the table etc.
+2. DDL commnads save all the changes permanently in the database.
+
+Commands :-
+--------------
+1. CREATE
+2. DROP
+3. ALTER 
+4. TRUNCATE
+
+
+
+
+CREATE :-
+--------------
+1. It is used to create a new table in the database.
+
+Syntax :-
+-----------
+CREATE TABLE TABLE_NAME (COLUMN_NAME DATATYPES[,....]);  
+
+Example :-
+--------------
+CREATE TABLE Employee
+(
+    Employee_id number(10),
+    Employee_name varchar2(50),
+    Employee_city varchar2(20)
+)
+
+
+
+
+CREATE TABLE AS :-
+-----------------------------
+1. This command is used to create new table from existing table by coping the columns of existing table.
+
+Syntax :-
+------------
+CREATE TABLE new_table AS(SELECT * FROM Oldtable);
+
+Example :-
+------------
+CREATE TABLE Customers AS (SELECT * FROM Employee);
+CREATE TABLE Customers AS (SELECT * FROM Employee WHERE id > 20);  //using where clause
+
+
+
+
+DROP :-
+---------
+1. It is used to delete both the structure and record stored in the table.
+
+Syntax :-
+-------------
+DROP TABLE TABLENAME;
+
+Example :-
+--------------
+DROP TABLE Employee;
+
+
+
+
+
+ALTER :-
+-------------
+1. It is used to change or modify the records in the existing table.
+2. It is used to alter the structure of the database.
+
+Syntax :-
+----------------
+
+**** To ADD a new column in the table :---
+     -----------------------------------
+   
+ALTER TABLE table_name ADD column_name COLUMN-definition;  
+
+Example :-
+-------------
+ALTER TABLE Employee ADD Employee_address varchar2(10);
+                
+
+
+**** To MODIFY a new column in the table :---
+     -----------------------------------
+   
+ALTER TABLE table_name MODIFY(COLUMN-definition...);  
+
+Example :-
+-------------
+ALTER TABLE Employee MODIFY(Employee_name varchar2(10));
+
+
+
+
+
+
+TRUNCATE :-
+-------------------
+1. It is used to delete all the rows in the table and the free space containing in the table.
+
+Syntax :-
+-----------
+TRUNCATE TABLE Tablename;
+
+Example :-
+--------------------
+TRUNCATE TABLE Employee;
+                
+
+
